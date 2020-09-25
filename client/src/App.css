@@ -1,0 +1,75 @@
+body{
+  background-color: black;
+  padding: 0 5%
+}
+.portifolio{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 
+    "portifolio__menu portifolio__body";
+    background-color: #030824;
+}
+.portifolio__menu{
+  grid-area: portifolio__menu;
+  background-color: rgba(255, 255, 255, .2);
+}
+.portifolio__section__header{
+  grid-area: header;
+  margin: 0;
+  color: white;
+  width: 100%;
+  border-bottom: 5px solid white;
+}
+.portifolio__body{
+  padding: 3% 5%;
+  display: grid;
+  grid-template-rows: .15fr .4fr auto;
+  grid-template-areas: 
+    "about_me"
+    "whatIdo"
+    "projects";
+  color: white;
+  grid-row-gap: 10px;
+}
+.about_me{
+  grid-area: about_me;
+}
+.about_me__text{
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+.whatIdo{
+  grid-area: whatIdo;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr auto;
+  grid-template-areas: 
+    "header header"
+    "box box";
+  grid-column-gap: 10px;
+}
+  .whatIdo__box{
+    margin-top: 10px;
+    grid-area: "box";
+    display: flex;
+    background-color: rgba(255, 255, 255, .3);
+  }
+    .whatIdo__box__icon{
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .whatIdo__box__body{
+      width: 60%;
+      padding-right: 10px;
+    }
+      .whatIdo__box__body__text{
+        text-align: justify;
+      }
+      .whatIdo__box__body__list{
+        list-style: none;
+        padding: 0;
+      }
+    
