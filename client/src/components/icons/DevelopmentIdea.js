@@ -3,14 +3,14 @@ import React from 'react'
 const DevelopmentIdea = (props) => {
     return (
       <svg
-        height="10rem"
+        height="7rem"
         style={{enableBackground:"new 0 0 512 512"}}
         version="1.1"
         viewBox="0 0 512 512"
-        width="10rem"
+        width="7rem"
         xmlns="http://www.w3.org/2000/svg"
         stroke="currentColor"
-        fill="#FEFEFE"
+        fill="currentColor"
       >
         <g id="_x35_5_x2C__deveopment_x2C__idea_x2C__bulb_x2C__pencil_x2C__scale_x2C_">
           <g>
