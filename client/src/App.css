@@ -25,6 +25,8 @@
   flex-direction: column;
   color: white;
   grid-row-gap: 5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .about_me{
   min-height: 10vh;
@@ -123,10 +125,25 @@
     background-color: white;
     margin: 10px
 }
+.projects{
+  width: 100%;
+}
+  .project_grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .project_grid__image{
+    width: 100%;
+    height: 50vh;
+  }
 
-  @media only screen and (max-width: 1375px){
+
+  @media only screen and (max-width: 1365px){
     .portifolio{
-      grid-template-columns: 20% 80%;
+      grid-template-columns: 30% 70%;
     }
     .portifolio__body{
       padding: 3% 3%;
@@ -138,7 +155,7 @@
 
   @media only screen and (max-width: 1245px){
     .portifolio{
-      grid-template-columns: 25% 75%;
+      grid-template-columns: 30% 70%;
     }
     .portifolio__body{
       padding: 3% 5%;
@@ -152,6 +169,7 @@
       margin: 0;
     }
     .whatIdo{
+      min-height: 60vh;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
       grid-template-areas: 
@@ -199,6 +217,7 @@
         padding: 0;
       }
     .whatIdo{
+      min-height: 50vh;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
       grid-template-areas: 
@@ -297,5 +316,9 @@
     }
     .toggle .burger-l3{
         transform: rotate(45deg) translate(-10px, -10px);
+    }
+    .project_grid{
+      grid-template-columns: 1fr;
+      padding: 0 10px;
     }
   }
