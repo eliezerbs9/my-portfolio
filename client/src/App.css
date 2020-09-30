@@ -110,6 +110,9 @@
     margin-top: 70px;
     list-style: none;
   }
+  .menu__social_media span{
+    display: none;
+  }
 .burger{
     cursor: pointer;
     display: none;
@@ -245,7 +248,7 @@
         }
       .menu__social_media{
         width: 100%;
-        background-color: rgba(53, 57, 80, .9);
+        background-color: rgba(53, 57, 80, .95);
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -262,6 +265,15 @@
         .menu__social_media li{
           text-align: center;
           width: 100%;
+        }
+        .menu__social_media li a:visited,
+        .menu__social_media li a{
+          text-align: center;
+          text-decoration: none;
+          color: white;
+        }
+        .menu__social_media span{
+          display: block;
         }
       @keyframes menuSocialFade{
         from{

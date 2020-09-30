@@ -7,7 +7,7 @@ const InstagranIcon = () => {
       width="60px"
       data-name="Layer 1"
       id="Layer_1"
-      viewBox="0 -150 600 750"
+      viewBox="0 -150 500 750"
       xmlns="http://www.w3.org/2000/svg"
       fill="white"
     >

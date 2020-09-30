@@ -32,13 +32,13 @@ const Menu = () => {
 
             <ul className="menu__social_media">
                 <li>
-                    <a href=""><span><GithubIcon/></span></a>
+                    <a href=""><GithubIcon/><span>Github</span></a>
                 </li>
                 <li>
-                    <a href=""><span><InstagranIcon /></span></a>
+                    <a href=""><InstagranIcon /><span>Instagran</span></a>
                 </li>
                 <li>
-                    <a href=""><span><EmailIcon /></span></a>
+                    <a href=""><EmailIcon /><span>Email-me</span></a>
                 </li>
             </ul>
 
