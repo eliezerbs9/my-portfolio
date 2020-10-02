@@ -24,19 +24,18 @@
   display: flex;
   flex-direction: column;
   color: white;
-  grid-row-gap: 5%;
   overflow-x: hidden;
   overflow-y: scroll;
+  gap: 2%;
 }
 .about_me{
-  min-height: 10vh;
+  height: auto;
 }
 .about_me__text{
   padding-left: 20px;
   margin-bottom: 0;
 }
 .whatIdo{
-  min-height: 35vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr minmax(25vh, 30vh);
@@ -240,7 +239,7 @@
     }
   }
 
-  @media only screen and (max-width: 1024px){
+  /* @media only screen and (max-width: 1024px){
     .portifolio{
       grid-template-columns: 30% 70%;
     }
@@ -288,9 +287,9 @@
       .btn--project_card{
         display: block;
       }
-  }
+  } */
 
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 1024px){
     .portifolio{
       grid-template-columns: 1fr;
       grid-template-rows: 100px auto;
@@ -306,22 +305,13 @@
         margin: 0 10px;
         padding: 0;
       }
-    .about_me{
-      min-height: 15vh;
-    }
     .whatIdo{
-      min-height: 60vh;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: 
-        "header"
-        "box"
-        "box";
-      grid-row-gap: 20px;
+      grid-template-rows: 0.1fr auto
     }
       .whatIdo__box{
-        height: 25vh;
-        margin: 0 10px;
+        height: auto;
+        margin: 10px 10px 0 10px;
+        align-self: center;
       }
       .whatIdo__box h3{
        margin: 0;
@@ -367,7 +357,7 @@
         left: 50%;
         position: absolute;
         transform: translate(-50%, -100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease-in;
       }
         .menu__social_media--active{
           top: 100px;
@@ -409,18 +399,33 @@
     .toggle .burger-l3{
         transform: rotate(45deg) translate(-10px, -10px);
     }
-    .project_grid{
-      grid-template-columns: 1fr;
-      padding: 0 10px;
+    .project_card__image{
+      height: 40vh;
     }
+    .project_card__info{
+      height: 40vh;
+    }
+    .btn--project_card{
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+    .whatIdo{
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "header"
+        "box"
+        "box";
+    }
+      .whatIdo__box{
+        height: auto;
+      }
     .project_card__image{
       height: 70vh;
     }
     .project_card__info{
       height: 70vh;
-    }
-    .btn--project_card{
-      display: block;
     }
   }
 
@@ -451,7 +456,7 @@
     }
   }
 
-  @media only screen and (max-width: 1024px) and (max-height: 1366px) {
+  /* @media only screen and (max-width: 1024px) and (max-height: 1366px) {
     .menu{
       margin-top: 15vh;
     }
@@ -470,4 +475,4 @@
     .project_card__info{
       height: 30vh;
     }
-  }
+  } */
