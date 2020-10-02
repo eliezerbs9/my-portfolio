@@ -4,6 +4,7 @@ import whatIdo from "./components/WhatIdo";
 import "./App.css";
 import WhatIdo from "./components/WhatIdo";
 import Menu from './components/Menu'
+import ProjectCard from './components/ProjectCard'
 
 function App() {
   return (
@@ -25,30 +26,13 @@ function App() {
         <section className="projects">
           <h1 className="portifolio__section__header">Projects</h1>
           <div className="project_grid">
-            <img 
-              src="https://thehypedgeek.com/wp-content/uploads/2015/06/Dragon-Ball-Super-Anime-Visual-1.jpg" 
-              alt="Project"
-              className="project_grid__image"/>
-              <img 
-              src="https://thehypedgeek.com/wp-content/uploads/2015/06/Dragon-Ball-Super-Anime-Visual-1.jpg" 
-              alt="Project"
-              className="project_grid__image"/>
-              <img 
-              src="https://thehypedgeek.com/wp-content/uploads/2015/06/Dragon-Ball-Super-Anime-Visual-1.jpg" 
-              alt="Project"
-              className="project_grid__image"/>
-              <img 
-              src="https://thehypedgeek.com/wp-content/uploads/2015/06/Dragon-Ball-Super-Anime-Visual-1.jpg" 
-              alt="Project"
-              className="project_grid__image"/>
-              <img 
-              src="https://thehypedgeek.com/wp-content/uploads/2015/06/Dragon-Ball-Super-Anime-Visual-1.jpg" 
-              alt="Project"
-              className="project_grid__image"/>
-              <img 
-              src="https://thehypedgeek.com/wp-content/uploads/2015/06/Dragon-Ball-Super-Anime-Visual-1.jpg" 
-              alt="Project"
-              className="project_grid__image"/>
+            <ProjectCard />
+            <ProjectCard />
+
+            <ProjectCard />
+
+            <ProjectCard />
+
           </div>
         </section>
       </div>

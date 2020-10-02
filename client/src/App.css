@@ -135,13 +135,97 @@
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
-  .project_grid__image{
+  .project_card{
+    position: relative;
     width: 100%;
-    height: 50vh;
+    height: auto;
+  }
+  .project_card__image{
+    width: 100%;
+    height: 60vh;
+  }
+  .project_card__info{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    top: 0;
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .8);
+    opacity: 0;
+    transform: translate(0%, 100%);
+    transition: transform 0.5s ease-out;
+  }
+    .project_card__info--active{
+      transform: translate(0%, 0%);
+    }
+    .project_card__info__header{
+      margin: 40px 0 0 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .project_card__info__body{
+      font-size: 1.2rem;
+      margin: 0;
+      margin-top: auto;
+      padding: 0 10px;
+    }
+    .project_card__info__footer{
+      margin-top: auto;
+      padding: 0 10px 40px 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  @keyframes projectCardFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  @keyframes projectCardFadeOut{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+  }
+  .btn:visited,
+  .btn{
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: 2px solid #020514;
+    width: 100px;
+    background-color: #353950;
+  }
+  .btn--large{
+    width: 110px;
+    border: 4px solid;
+    font-weight: 500;
+    height: 30px;
+  }
+  .btn--project_card{
+    color:  #020514;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 100px;
+    display: none;
   }
 
 
-  @media only screen and (max-width: 1365px){
+  @media only screen and (max-width: 1366px){
     .portifolio{
       grid-template-columns: 30% 70%;
     }
@@ -151,9 +235,12 @@
     .whatIdo__box__image{
       padding: 10px 20px;
     }
+    .btn--project_card{
+      display: block;
+    }
   }
 
-  @media only screen and (max-width: 1245px){
+  @media only screen and (max-width: 1024px){
     .portifolio{
       grid-template-columns: 30% 70%;
     }
@@ -192,12 +279,15 @@
       .whatIdo__box__body__text{
         margin: 0;
       }
-  }
-
-  @media only screen and (max-width: 865px){
-    .menu__info__name{
-      font-size: 1.0rem;
-    }
+      .project_card__image{
+        height: 50vh;
+      }
+      .project_card__info{
+        height: 50vh;
+      }
+      .btn--project_card{
+        display: block;
+      }
   }
 
   @media only screen and (max-width: 768px){
@@ -216,8 +306,11 @@
         margin: 0 10px;
         padding: 0;
       }
+    .about_me{
+      min-height: 15vh;
+    }
     .whatIdo{
-      min-height: 50vh;
+      min-height: 60vh;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
       grid-template-areas: 
@@ -227,7 +320,7 @@
       grid-row-gap: 20px;
     }
       .whatIdo__box{
-        height: 20vh;
+        height: 25vh;
         margin: 0 10px;
       }
       .whatIdo__box h3{
@@ -239,9 +332,6 @@
       }
       .whatIdo__box__body__text{
         margin: 0;
-      }
-      .whatIdo__box__body__list {
-
       }
     .menu{
       margin: 0;
@@ -266,6 +356,8 @@
           margin: 0;
         }
       .menu__social_media{
+        padding: 10px 0;
+        z-index: 999;
         width: 100%;
         background-color: rgba(53, 57, 80, .95);
         margin: 0;
@@ -320,5 +412,62 @@
     .project_grid{
       grid-template-columns: 1fr;
       padding: 0 10px;
+    }
+    .project_card__image{
+      height: 70vh;
+    }
+    .project_card__info{
+      height: 70vh;
+    }
+    .btn--project_card{
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    .about_me{
+      min-height: 20vh;
+    }
+      .about_me__text{
+        font-size: small;
+      }
+    .whatIdo{
+      min-height: 70vh;
+    }
+      .whatIdo__box{
+        height: 25vh;
+      }
+        .whatIdo__box h3{
+          font-size: 1.0rem;
+        }
+        .whatIdo__box__body__text{
+          font-size: small;
+        }
+        .whatIdo__box__body__list{
+          font-size: small;
+    }
+    .project_card__info__body{
+      font-size: small;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) and (max-height: 1366px) {
+    .menu{
+      margin-top: 15vh;
+    }
+    .about_me{
+      min-height: 5vh;
+    }
+    .whatIdo{
+      min-height: 35vh;
+    }
+      .whatIdo__box{
+        height: 15vh;
+      }
+    .project_card__image{
+      height: 30vh;
+    }
+    .project_card__info{
+      height: 30vh;
     }
   }
