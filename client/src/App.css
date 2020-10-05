@@ -1,4 +1,7 @@
 
+*{
+  font-family: 'Open Sans', sans-serif;
+}
 .portifolio{
   height: 100vh;
   display: grid;
@@ -38,21 +41,24 @@
 .whatIdo{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr minmax(25vh, 30vh);
+  grid-template-rows: 0.1fr auto;
   grid-template-areas: 
     "header header"
     "box box";
   grid-column-gap: 20px;
 }
   .whatIdo__box{
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    min-height: 200px;
     grid-area: "box";
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, .3);
   }
+    .whatIdo__box h3{
+      margin: 0;
+    }
     .whatIdo__box__image{
       padding: 20px 40px;
       max-width: 20%;
@@ -63,9 +69,14 @@
       padding: 10px 10px 10px 10px
     }
       .whatIdo__box__body__text{
+        font-weight: 300;
+        letter-spacing: 1px;
         text-align: justify;
       }
       .whatIdo__box__body__list{
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-align: justify;
         margin: 0;
         width: 100%;
         list-style: none;
