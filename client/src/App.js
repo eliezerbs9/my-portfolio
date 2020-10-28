@@ -1,10 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
-import whatIdo from "./components/WhatIdo";
 import "./App.css";
 import WhatIdo from "./components/WhatIdo";
 import Menu from './components/Menu'
-import ProjectCard from './components/ProjectCard'
+import Projects from './components/Projects'
 
 function App() {
   return (
@@ -23,18 +21,7 @@ function App() {
         <section className="whatIdo">
           <WhatIdo />
         </section>
-        <section className="projects">
-          <h1 className="portifolio__section__header">Projects</h1>
-          <div className="project_grid">
-            <ProjectCard />
-            <ProjectCard />
-
-            <ProjectCard />
-
-            <ProjectCard />
-
-          </div>
-        </section>
+        <Projects />
       </div>
     </div>
   );
