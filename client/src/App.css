@@ -1,6 +1,6 @@
 
 *{
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
 }
 .portifolio{
   height: 100vh;
@@ -96,8 +96,10 @@
   .menu__image{
     display: block;
     max-width: 90%;
+    max-width: 250px;
     border-radius: 50%;
     background-color: white;
+    border: 1px solid white
   }
   .menu__info{
     display: flex;
@@ -176,7 +178,7 @@
       text-align: center;
     }
     .project_card__info__body{
-      font-size: 1.2rem;
+      font-size: 1.0rem;
       margin: 0;
       margin-top: auto;
       padding: 0 10px;
@@ -248,57 +250,14 @@
     .btn--project_card{
       display: block;
     }
+    .whatIdo__box__image{
+      padding: 10px 10px;
+    }
+    .whatIdo__box__body{
+      padding: 0;
+    }
   }
 
-  /* @media only screen and (max-width: 1024px){
-    .portifolio{
-      grid-template-columns: 30% 70%;
-    }
-    .portifolio__body{
-      padding: 3% 5%;
-    }
-    .menu__info__name{
-      font-size: 1.2rem;
-    }
-    .menu__info__text{
-      text-align: center;
-      font-size: small;
-      margin: 0;
-    }
-    .whatIdo{
-      min-height: 60vh;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: 
-        "header"
-        "box"
-        "box";
-      grid-row-gap: 20px;
-    }
-      .whatIdo__box{
-        height: 25vh;
-        margin: 0 10px;
-      }
-      .whatIdo__box h3{
-       margin: 0;
-      }
-      .whatIdo__box__image{
-        width: 100px;
-        height: 100px;
-      }
-      .whatIdo__box__body__text{
-        margin: 0;
-      }
-      .project_card__image{
-        height: 50vh;
-      }
-      .project_card__info{
-        height: 50vh;
-      }
-      .btn--project_card{
-        display: block;
-      }
-  } */
 
   @media only screen and (max-width: 1024px){
     .portifolio{

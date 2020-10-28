@@ -2,9 +2,13 @@ import React from 'react'
 import GithubIcon from './icons/GithubIcon'
 import InstagranIcon from './icons/InstagranIcon'
 import EmailIcon from './icons/EmailIcon'
+import LinkedinIcon from './icons/LinkedinIcon'
+import useFirestore from '../hooks/useFirestore'
 
 const Menu = () => {
 
+    const {docs} = useFirestore('profile')
+    
     const toggle = () => {
         var burger = document.querySelector('.burger')
         var menu__social = document.querySelector('.menu__social_media')
@@ -21,33 +25,42 @@ const Menu = () => {
     }
 
 
+
+
     return(
-        <div className="menu">
-            <img src="https://media.japanpowered.com/images/goku.png" alt="My image" className="menu__image"/>
-            <div className="menu__info">
-                <p className="menu__info__name">Eliezer Barbosa</p>
-                <p className="menu__info__text">Web Developer</p>
-                <p className="menu__info__text">San Rafael - California</p>
-            </div>
+        <>
+            {docs && (
+                <div className="menu">
+                    <img src={docs[0].photoUrl} alt="My image" className="menu__image"/>
+                    <div className="menu__info">
+                        <p className="menu__info__name">{docs[0].name}</p>
+                        <p className="menu__info__text">{docs[0].function}</p>
+                        <p className="menu__info__text">{docs[0].location}</p>
+                    </div>
 
-            <ul className="menu__social_media">
-                <li>
-                    <a href=""><GithubIcon/><span>Github</span></a>
-                </li>
-                <li>
-                    <a href=""><InstagranIcon /><span>Instagran</span></a>
-                </li>
-                <li>
-                    <a href=""><EmailIcon /><span>Email-me</span></a>
-                </li>
-            </ul>
+                    <ul className="menu__social_media">
+                        <li>
+                            <a href={docs[0].gitUrl}><GithubIcon/><span>Github</span></a>
+                        </li>
+                        <li>
+                            <a href={docs[0].linkedinUrl}><LinkedinIcon /><span>LinkedIn</span></a>
+                        </li>
+                        <li>
+                            <a href={docs[0].email}><EmailIcon /><span>Email-me</span></a>
+                        </li>
+                    </ul>
 
-            <div className="burger" onClick={toggle}>
-                <div className="burger-l1"></div>
-                <div className="burger-l2"></div>
-                <div className="burger-l3"></div>
-            </div>
-        </div>
+                    <div className="burger" onClick={toggle}>
+                        <div className="burger-l1"></div>
+                        <div className="burger-l2"></div>
+                        <div className="burger-l3"></div>
+                    </div>
+                </div>
+
+            )}
+        </>
+            
+            
     )
 }
 
