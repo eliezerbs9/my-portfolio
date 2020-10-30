@@ -138,6 +138,7 @@
     margin: 10px
 }
 .projects{
+  margin-bottom: 5%;
   width: 100%;
 }
   .project_grid{
@@ -148,6 +149,7 @@
     grid-row-gap: 20px;
   }
   .project_card{
+    border: 2px solid white;
     position: relative;
     width: 100%;
     height: auto;
@@ -293,7 +295,11 @@
         width: 100px;
         height: 100px;
       }
+      .whatIdo__box__body{
+        padding: 0 10px;
+      }
       .whatIdo__box__body__text{
+        letter-spacing: 0;
         margin: 0;
       }
     .menu{
@@ -372,8 +378,10 @@
     .toggle .burger-l3{
         transform: rotate(45deg) translate(-10px, -10px);
     }
+    .project_grid{
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
     .project_card{
-      border: 2px solid white;
       width: 80%;
       margin-left: auto;
       margin-right: auto;
@@ -397,8 +405,12 @@
         "box"
         "box";
     }
-      .whatIdo__box{
+      .whatIdo__box{ 
+        padding: 0 30px;
         height: auto;
+      }
+      .whatIdo__box__body{
+        margin-left: 30px;
       }
     .project_card__image{
       height: 70vh;

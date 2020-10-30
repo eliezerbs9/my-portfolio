@@ -46,7 +46,7 @@ const Menu = () => {
                             <a href={docs[0].linkedinUrl}><LinkedinIcon /><span>LinkedIn</span></a>
                         </li>
                         <li>
-                            <a href={docs[0].email}><EmailIcon /><span>Email-me</span></a>
+                            <a href={`mailto: ${docs[0].email}`}><EmailIcon /><span>Email-me</span></a>
                         </li>
                     </ul>
 

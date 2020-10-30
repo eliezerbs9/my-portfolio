@@ -30,7 +30,6 @@ const WhatIdo = () => {
                             <li>NodeJS</li>
                             <li>PhotoShop</li>
                             <li>AdobeXD</li>
-                            <li>AdobeIllustrator</li>
                             <li>UI/UX Design</li>
                         </ul>
                         <div style={{clear:"both"}}></div>
