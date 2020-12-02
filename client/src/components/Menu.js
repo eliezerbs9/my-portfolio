@@ -1,6 +1,5 @@
 import React from 'react'
 import GithubIcon from './icons/GithubIcon'
-import InstagranIcon from './icons/InstagranIcon'
 import EmailIcon from './icons/EmailIcon'
 import LinkedinIcon from './icons/LinkedinIcon'
 import useFirestore from '../hooks/useFirestore'
@@ -31,7 +30,7 @@ const Menu = () => {
         <>
             {docs && (
                 <div className="menu">
-                    <img src={docs[0].photoUrl} alt="My image" className="menu__image"/>
+                    <img src={docs[0].photoUrl} alt="profile" className="menu__image"/>
                     <div className="menu__info">
                         <p className="menu__info__name">{docs[0].name}</p>
                         <p className="menu__info__text">{docs[0].function}</p>

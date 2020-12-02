@@ -22,8 +22,8 @@ const WhatIdo = () => {
                     <div className="whatIdo__box__body">
                         <h3>Skills</h3>
                         <ul className="whatIdo__box__body__list">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
                             <li>Javascript</li>
                             <li>React</li>
                             <li>Redux</li>

@@ -8,7 +8,6 @@ const GithubIcon = () => {
         viewBox="0 0 60 60"
         width="60px"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsSketch="http://www.bohemiancoding.com/sketch/ns"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <title />
@@ -16,10 +15,9 @@ const GithubIcon = () => {
         <defs />
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           id="black"
           stroke="none"
-          stroke-width="1"
         >
           <g id="slice" transform="translate(-900.000000, -500.000000)" />
           <g

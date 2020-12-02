@@ -6,7 +6,6 @@ import useFirestore from '../hooks/useFirestore'
 const Projects = () => {
 
     const {docs} = useFirestore('projects')
-    console.log(docs)
 
     return (
         <>
@@ -16,7 +15,7 @@ const Projects = () => {
                 <div className="project_grid">
                     {docs.map(doc => {
                         return (
-                            <ProjectCard project={doc} />
+                            <ProjectCard project={doc} key={doc.id}/>
                         )
                     })}
                 </div>

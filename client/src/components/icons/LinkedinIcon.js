@@ -10,7 +10,6 @@ const LinkedinIcon = () => {
       width="60px"
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsSerif="http://www.serif.com/"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       fill="white"
     >

@@ -5,12 +5,11 @@ const EmailIcon = () => {
     <svg
       height="60px"
       width="60px"
-      enable-background="new 0 0 32 32"
+      enableBackground="new 0 0 32 32"
       version="1.1"
       viewBox="0 -10 32 50"
       xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsSlink="http://www.w3.org/1999/xlink"
     >
       <g id="Style_2">
         <g>

@@ -39,10 +39,10 @@ const ProjectCard = ({project}) => {
                 className="project_card__image"/>
                 <div className={`project_card__info`} ref={card}>
                     <h1 className="project_card__info__header">{project.name}</h1>
-                    <p className="project_card__info__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sapiente excepturi magnam neque, quis voluptatibus consectetur quibusdam, ad, in maxime unde? Tempore ut voluptatem quos molestiae officia, delectus illum a!</p>
+                    <p className="project_card__info__body">{project.description}</p>
                     <div className="project_card__info__footer">
-                        <a href="#" className="btn btn--large"><span></span>Code</a>
-                        <a href="#" className="btn btn--large">View Project</a>
+                        <a href={project.github} className="btn btn--large">Code</a>
+                        <a href={project.url} className="btn btn--large">View Project</a>
                     </div>
                 </div>
                 <button 
